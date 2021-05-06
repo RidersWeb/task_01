@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    "strict";
+    class Point {
+      constructor(x, y){
+        this._x = x;
+        this._y = y;
+      }
+      // Геттеры
+      get dist() {
+        return Math.sqrt(this._x ** 2 + this._y ** 2)
+      }
+      get x(){
+        return this._x * 10;
+      }
+      // Сеттеры
+     set x(int){
+       if(int < 0) {
+         console.log(String(this._x = 'X недолжен быть меньше 0'));
+         this._x = 0;
+        }
+        else this._x = int;
+     }
+    }
+
+    let p = new Point(5, 10);
+
+    //console.log(p.dist);
+    p.x = -100;
+    console.log(p.x);
+  </script>
+</body>
+</html>
