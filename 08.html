@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class</title>
+</head>
+<body>
+<!-- 
+1) Перепишите предыдущее упражнение, оформив всё в виде класса. То есть должен быть класс прямоугольника с конструктором и методами.
+2) Создайте объект прямоугольника, используя конструктор класса.
+3) Проверьте правильность значений всех свойств и методов у объекта.
+4) Измените значения свойств у объекта (не у класса, а именно у объекта), после выведите их, убедившись, что они приняли новые значения. -->
+  <script>
+    'use strict'
+    class Point {
+      z = 5;
+      constructor(x, y) {
+        this.x = x;
+        this.y = y;
+      }
+      getDinst() {
+        return Math.sqrt(this.x ** 2 + this.y ** 2)
+      }
+    }
+
+    let p = new Point(10, 20);
+
+    p.x = 55;
+
+    console.log(p.getDinst());
+  </script>
+</body>
+</html>
