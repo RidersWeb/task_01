@@ -1,0 +1,46 @@
+<!-- 1) Перепишите упражнение из предыдущего урока, сделав так, чтобы метод, возвращающий площадь, стал геттером. То есть, чтобы можно было обратиться не так «obj.square()», а просто вот так «obj.square».
+2) Сделайте геттеры и сеттеры для ширины и высоты, при этом выбросив исключения, если переданные параметры отрицательные (не бывает ширины и высоты меньше нуля).
+3) Убедитесь, что созданные геттеры и сеттеры правильно работают. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    "use strict";
+
+    class Sum {
+      constructor(x, y){
+        this._x = x;
+        this._y = y;
+      }
+      get x() {
+        if(this._x > 0){
+          return this._x * this._y;
+        } else {
+          console.log('Отрицательное число' + this._x);
+        }
+        
+      }
+
+      set x(int){
+        if(int < 0) {
+          return this._x = int;
+        } else {
+          return this._x = int;
+        }
+      }
+    }
+
+    let a = new Sum(5, 5);
+    a.x = - 25;
+    console.log(a.x);
+
+
+  </script>
+</body>
+</html>
