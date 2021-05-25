@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // var Car = Object.create({}, {
+    //   name: {value: 'ford'},
+    //   age: {value: 2019},
+      
+    // })
+
+    // var car = {
+    //   name: 'Ford',
+    //   year: 2005,
+    //   dist: 125000
+    // }
+
+    // for(var key in car){
+    //   if(car.hasOwnProperty(key))
+    //   console.log(car[key])
+    // }
+    
+      // let keys = Object.keys(car)
+      // console.log(keys)
+
+      // Object.keys(car).forEach(function(key){
+      //   console.log(car[key])
+      // })
+
+
+
+      let counterCreate = function(counterName){
+        let counter = 0
+
+        return {
+
+          incriment: function() {
+            ++counter
+          },
+
+          decriment: function() {
+            --counter
+          },
+
+          getCounter: function() {
+            console.log(counter)
+          }
+
+        }
+      }
+
+      let counterA = counterCreate('counter A')
+      let counterB = counterCreate('counter B')
+
+      counterA.incriment()
+      counterA.incriment()
+
+      counterB.decriment()
+
+  </script>
+</body>
+</html>

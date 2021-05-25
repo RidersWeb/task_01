@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>19</title>
+</head>
+<body>
+  <script>
+  //  var person = {
+  //    name: 'Max',
+  //    age: 24,
+  //    job: 'Frontend',
+  //    displayInfo: function(ms) {
+      
+  //      setTimeout(function() {
+  //        //debugger
+  //       console.log('Name: ', this.name)
+  //       console.log('age: ', this.age)
+  //       console.log('job: ', this.job)
+  //      }.bind(this), ms)
+  //    }
+  //  }
+  //  person.displayInfo(2000)
+
+
+
+
+
+  // let a = [1, 2, 3]
+  // let b = [5, 'Hello', 6]
+
+  // Array.prototype.double = function() {
+  //   let newArray = this.map(function(item) {
+  //     if(typeof item === 'number') {
+  //       return Math.pow(item, 2)
+  //     }
+
+  //     if(typeof item === 'string') {
+  //       return item + item
+  //     }
+  //   })
+  //   return newArray
+  // }
+
+  // let newA = a.double()
+  // let newB = b.double()
+
+  // console.log('newA', newA.double())
+  // console.log('newB', newB)
+
+
+    // const getAge = year => new Date().getFullYear() - year
+
+    // console.log(getAge(2005))
+
+    // const person = {
+    //   age: 28,
+    //   firstName: 'Slava',
+    //   logSetTimeOut(){
+    //     setTimeout(() => {
+    //       console.log(this.firstName)
+    //     }, 1000)
+    //   }
+    // }
+
+
+    // const createPost = (title, text, data = new Date().toLocaleDateString()) => ({title, text, data})
+
+    // console.log(createPost('javaScript', 'Мы учим JS'))
+
+    // const createCar = (name, model, year = new Date().toLocaleDateString()) => ({name, model, year})
+
+    // const ford = createCar('ford', 'focus')
+
+    // console.log(ford)
+
+    const varYear = 'year'
+
+    const bmw = {
+      name: 'BMW',
+      ['model']: 'X6 sport',
+      [varYear]: 2020,
+      getDate() {
+        const {name, model, year} = this
+        console.log(name, model, year)
+      }
+    }
+
+    bmw.getDate()
+
+    или так выводим
+    console.log(bmw.year)
+
+    или делаем деструкторизацию
+    const {year} = bmw
+    console.log(year)
+
+  </script>
+</body>
+</html>

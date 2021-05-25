@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function Car(name, year) {
+      this.name = name
+      this.year = year
+
+    }
+
+    Car.prototype.getAge = function(){
+      return new Date().getFullYear() - this.year
+    }
+
+    var ford = new Car('ford', 2015)
+    var bmw = new Car('bmw', 2019)
+    ford.color = 'red'
+
+    console.log(ford)
+    console.log(`Я в этом году куплю себе ${bmw.name}, год миниму ${bmw.year}`)
+    console.log('уже ' + bmw.getAge() + ` года автомобилю`)
+
+  </script>
+</body>
+</html>
